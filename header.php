@@ -21,10 +21,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<div class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'loremipsum' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header class="site-header">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -44,7 +44,7 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav  class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'loremipsum' ); ?></button>
 			<?php
 			wp_nav_menu( array(
@@ -55,4 +55,4 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div class="site-content">
