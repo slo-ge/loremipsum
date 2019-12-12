@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.site {
+  margin: 0 15px;
+  flex: 1 1 auto;
+
+  @include respond-above(SM) {
+    max-width: 1024px;
+  }
+}

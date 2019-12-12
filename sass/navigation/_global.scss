@@ -1,0 +1,13 @@
+#primary-menu {
+  > li {
+    display: block;
+    float: none;
+  }
+}
+
+  @include respond-above(SM) {
+  #primary-menu { // this class is on ul
+    display: flex;
+    justify-content: space-between;
+  }
+}

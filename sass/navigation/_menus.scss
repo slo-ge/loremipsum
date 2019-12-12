@@ -1,8 +1,5 @@
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
 
 	ul {
 		display: none;
@@ -31,15 +28,7 @@
 			}
 
 			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
+				min-width: 200px;
 			}
 		}
 
@@ -52,21 +41,11 @@
 	li {
 		float: left;
 		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
 	}
 }
 
@@ -76,7 +55,7 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@include respond-above(SM){
 	.menu-toggle {
 		display: none;
 	}

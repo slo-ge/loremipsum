@@ -6,6 +6,7 @@
  *
  * @package loremipsum
  */
+require_once 'settings/comments.php';
 
 if ( ! function_exists( 'loremipsum_setup' ) ) :
 	/**
