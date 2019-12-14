@@ -5,7 +5,7 @@
   }
 }
 
-  @include respond-above(SM) {
+@include respond-above(SM) {
   #primary-menu { // this class is on ul
     display: flex;
     justify-content: space-between;

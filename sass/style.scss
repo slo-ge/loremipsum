@@ -24,9 +24,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "mixins/mixins-master";
 @import "mixins/_media-query";
 @import "normalize";
+@import "global/site";
 @import "typography/typography";
 @import "elements/elements";
 @import "navigation/navigation";
 @import "modules/accessibility";
 @import "modules/clearings";
-@import "global/site";
+@import "components/components";

@@ -14,6 +14,7 @@
 	</div><!-- #content -->
 
 	<footer class="site-footer">
+	<?php dynamic_sidebar( 'footer' ); ?>
 
 	</footer><!-- #colophon -->
 </div><!-- #page -->

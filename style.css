@@ -304,6 +304,17 @@ details {
 summary {
   display: list-item; }
 
+body {
+  display: flex;
+  justify-content: center; }
+
+.site {
+  margin: 0 15px;
+  flex: 1 1 auto; }
+  @media (min-width: 768px) {
+    .site {
+      max-width: 1024px; } }
+
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
@@ -504,13 +515,21 @@ a {
 .site-footer:after {
   clear: both; }
 
-body {
-  display: flex;
-  justify-content: center; }
-
-.site {
-  margin: 0 15px;
-  flex: 1 1 auto; }
-  @media (min-width: 768px) {
-    .site {
-      max-width: 1024px; } }
+.instagram-grid {
+  margin-top: 25px; }
+  @media (max-width: 767px) {
+    .instagram-grid .follow {
+      width: 100%; } }
+  .instagram-grid .instagram-items, .instagram-grid .instagram-head {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .instagram-grid .instagram-items h2, .instagram-grid .instagram-head h2 {
+      font-size: 30px; }
+    .instagram-grid .instagram-items img, .instagram-grid .instagram-head img {
+      height: 100%;
+      width: calc(50% - 5px);
+      margin: 10px 0; }
+    @media (min-width: 768px) {
+      .instagram-grid .instagram-items img, .instagram-grid .instagram-head img {
+        width: calc(25% - 10px); } }

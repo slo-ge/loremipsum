@@ -1,6 +1,8 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying posts,
+ *
+ * @me: a single post
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

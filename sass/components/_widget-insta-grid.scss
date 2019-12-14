@@ -1,0 +1,32 @@
+.instagram-grid {
+  margin-top: 25px;
+
+  .follow {
+    @include respond-below(SM) {
+      width: 100%;
+    }
+  }
+
+
+  .instagram-items, .instagram-head {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    h2 {
+      font-size: 30px;
+    }
+
+    img {
+      height: 100%;
+      width: calc(50% - 5px);
+      margin: 10px 0;
+    }
+
+    @include respond-above(SM){
+      img {
+        width: calc(25% - 10px);
+      }
+    }
+  }
+}
