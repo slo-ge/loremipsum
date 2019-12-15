@@ -369,7 +369,6 @@ a {
 .main-navigation {
   clear: both; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -409,6 +408,41 @@ a {
   .main-navigation ul {
     display: block; } }
 
+@media (max-width: 767px) {
+  .main-navigation .bar1, .main-navigation .bar2, .main-navigation .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s; }
+  .main-navigation .nav-menu {
+    transition-property: transition, height;
+    transition: 0.5s ease-out;
+    height: 0;
+    visibility: hidden;
+    transform-origin: top;
+    transform: scaleY(0); }
+  .main-navigation.toggled .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px); }
+  .main-navigation.toggled .bar2 {
+    opacity: 0; }
+  .main-navigation.toggled .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px); }
+  .main-navigation.toggled .nav-menu {
+    transition-property: transition, height;
+    transition: 0.5s ease-out;
+    visibility: visible;
+    transform: scaleY(1); } }
+
+#primary-menu > li {
+  display: block;
+  float: none; }
+
+@media (min-width: 768px) {
+  #primary-menu {
+    display: flex;
+    justify-content: space-between; } }
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -427,31 +461,6 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
-
-.main-navigation .bar1, .main-navigation .bar2, .main-navigation .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s; }
-
-.main-navigation.toggled .bar1 {
-  transform: rotate(-45deg) translate(-9px, 6px); }
-
-.main-navigation.toggled .bar2 {
-  opacity: 0; }
-
-.main-navigation.toggled .bar3 {
-  transform: rotate(45deg) translate(-8px, -8px); }
-
-#primary-menu > li {
-  display: block;
-  float: none; }
-
-@media (min-width: 768px) {
-  #primary-menu {
-    display: flex;
-    justify-content: space-between; } }
 
 /* Text meant only for screen readers. */
 .screen-reader-text {

@@ -39,10 +39,13 @@ var ID_SITE_NAVIGATION = 'site-navigation';
             container.className = container.className.replace(' toggled', '');
             button.setAttribute('aria-expanded', 'false');
             menu.setAttribute('aria-expanded', 'false');
+            menu.setAttribute('style', 'height:0px');
         } else {
             container.className += ' toggled';
+            menu.setAttribute('style', 'height:auto');
             button.setAttribute('aria-expanded', 'true');
             menu.setAttribute('aria-expanded', 'true');
+            menu.setAttribute('style', 'height:' +  menu.offsetHeight + 'px');
         }
     };
 

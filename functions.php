@@ -6,8 +6,9 @@
  *
  * @package loremipsum
  */
-require_once 'settings/comments.php';
 require_once 'config.php';
+require_once 'settings/comments.php';
+require_once 'inc/widgets/widgets.php';
 require_once 'inc/widget-areas.php';
 
 

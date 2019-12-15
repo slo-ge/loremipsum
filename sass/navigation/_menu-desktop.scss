@@ -1,0 +1,15 @@
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+}
+
+@include respond-above(SM){
+  .menu-toggle {
+    display: none;
+
+  }
+  .main-navigation ul {
+    display: block;
+  }
+}
