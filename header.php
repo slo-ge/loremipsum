@@ -55,9 +55,11 @@
         <!-- the id is used for the toggle navigation -->
         <nav id="site-navigation" class="main-navigation">
             <div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+                <div class="toggle-icon">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
             </div>
             <?php
             wp_nav_menu(array(

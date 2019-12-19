@@ -1,43 +1,42 @@
 @include respond-below(SM) {
-  .main-navigation {
-    .bar1, .bar2, .bar3 {
-      width: 35px;
-      height: 5px;
-      background-color: #333;
-      margin: 6px 0;
-      transition: 0.4s;
-    }
+	.main-navigation {
+		left: 100%;
 
-    .nav-menu {
-      transition-property: transition, height;
-      transition: 0.5s ease-out;
+		.bar1, .bar2, .bar3 {
+			width: 35px;
+			height: 5px;
+			background-color: #333;
+			margin: 6px 0;
+			transition: 0.4s;
+		}
 
-      height: 0;
-      visibility: hidden;
+		.menu-toggle {
+			display: flex;
+			justify-content: flex-end;
+		}
 
-      transform-origin: top;
-      transform: scaleY(0);
-    }
 
-    &.toggled {
-      .bar1 {
-        transform: rotate(-45deg) translate(-9px, 6px);
-      }
+		&.toggled {
+			width: 100%; // to make animation having a full size container
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: white;
+			transition: left 200ms;
 
-      .bar2 {
-        opacity: 0;
-      }
+			.bar1 {
+				transform: rotate(-45deg) translate(-9px, 6px);
+			}
 
-      .bar3 {
-        transform: rotate(45deg) translate(-8px, -8px);
-      }
+			.bar2 {
+				opacity: 0;
+			}
 
-      .nav-menu {
-        transition-property: transition, height;
-        transition: 0.5s ease-out;
-        visibility: visible;
-        transform: scaleY(1);
-      }
-    }
-  }
+			.bar3 {
+				transform: rotate(45deg) translate(-8px, -8px);
+			}
+		}
+	}
 }
