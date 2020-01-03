@@ -465,6 +465,16 @@ a {
   text-align: right;
   width: 50%; }
 
+#footer-menu {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  #footer-menu li {
+    text-decoration: none; }
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;

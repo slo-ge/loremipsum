@@ -11,12 +11,18 @@
 
 ?>
 
-	</div><!-- #content -->
+</div><!-- #content -->
 
-	<footer class="site-footer">
-	<?php dynamic_sidebar( 'footer' ); ?>
+<footer class="site-footer">
+    <?php dynamic_sidebar('footer'); ?>
 
-	</footer><!-- #colophon -->
+    <?php
+    wp_nav_menu(array(
+        'theme_location' => 'footer-menu',
+        'menu_id' => 'footer-menu'
+    ));
+    ?>
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
