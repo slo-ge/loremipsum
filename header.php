@@ -25,7 +25,6 @@
     <a class="skip-link screen-reader-text" href="#content">
         <?php esc_html_e('Skip to content', 'loremipsum'); ?>
     </a>
-
     <header class="site-header">
         <div class="site-branding">
             <?php

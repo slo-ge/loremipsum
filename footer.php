@@ -22,6 +22,9 @@
         'menu_id' => 'footer-menu'
     ));
     ?>
+    <div class="footer-text">
+        <?php echo get_theme_mod('footer_text_block'); ?>
+    </div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

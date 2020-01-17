@@ -9,5 +9,6 @@
   #primary-menu { // this class is on ul
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
