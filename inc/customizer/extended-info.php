@@ -15,17 +15,23 @@ add_action('customize_register', 'extended_blog_infos');
 function extended_blog_infos($wp_customize)
 {
     // The Panel Menu
-    $wp_customize->add_panel('text_blocks', array(
+    $wp_customize->add_panel('extended_info', array(
         'priority' => 500,
         'theme_supports' => '',
         'title' => __('Additional Infos', 'loremipsum'),
         'description' => __('Set editable text for certain content.', 'loremipsum'),
     ));
 
+
+    header_info($wp_customize);
+    footer_info($wp_customize);
+}
+
+function footer_info($wp_customize) {
     // The Section.
     $wp_customize->add_section('custom_footer_text', array(
         'title' => __('Change Footer Text', 'loremipsum'),
-        'panel' => 'text_blocks',
+        'panel' => 'extended_info',
         'priority' => 10
     ));
 
@@ -34,7 +40,6 @@ function extended_blog_infos($wp_customize)
         'default' => __('default text', 'loremipsum'),
         'sanitize_callback' => 'sanitize_text'
     ));
-
 
     /**
      * The Setting Type and appearance
@@ -61,9 +66,27 @@ function extended_blog_infos($wp_customize)
         )
     ));
 
-    // Sanitize text
     function sanitize_text($text)
     {
         return sanitize_text_field($text);
     }
+}
+
+function header_info($wp_customize)
+{
+    $wp_customize->add_section('custom_header_info', array(
+        'title' => __('Stage Image', 'loremipsum'),
+        'panel' => 'extended_info',
+        'priority' => 10
+    ));
+    $wp_customize->add_setting('header_image');
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        'Change the header Image',
+        array(
+            'label' => __('Upload a logo', 'loremipsum'),
+            'section' => 'custom_header_info',
+            'settings' => 'header_image'
+        )
+    ));
 }
